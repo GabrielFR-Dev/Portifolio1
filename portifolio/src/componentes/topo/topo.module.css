@@ -1,0 +1,159 @@
+.topo_modo_escuro,
+.topo_modo_claro {
+    width: 100%;
+    height: 65px;
+    display: flex;
+    background: var(--maisEscuro);
+    opacity: 90%;
+    justify-content: center;
+    gap: 50px;
+    position: fixed;
+    align-items: center;
+    top: 0;
+    z-index: 999;
+}
+
+.navegacao {
+    display: flex;
+}
+
+.menu {
+    display: flex;
+    gap: 50px;
+}
+
+.menu li {
+    font-size: 1.24rem;
+    color: var(--claro);
+    text-decoration: none;
+    list-style: none;
+}
+
+.menu_link {
+    text-decoration: none;
+    color: var(--claro);
+    font-weight: 500;
+    position: relative;
+    padding: 0.5rem;
+}
+
+.menu_link::after {
+    content: '';
+    height: 2px;
+    width: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(90deg, var(--primaria), var(--secundaria));
+    transition: width 0.5s ease;
+}
+
+.menu_link:hover::after {
+    width: 100%;
+}
+
+.icones {
+    width: 25px;
+    height: 25px;
+}
+
+.botao_desktop {
+    border-radius: 50%;
+    padding: 10px 10px;
+    display: flex;
+    align-items: center;
+    background: none;
+}
+
+
+/*====== Botão menu (resoluções menores)*/
+.menu {
+    display: none;
+    font-size: 34px;
+    background: none;
+    border: none;
+    color: var(--claro);
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: 20px;
+}
+.menu_mobile {
+    position: absolute;
+    top: 65px;
+    right: 10px;
+    background: var(--maisEscuro);
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    opacity: 95%;
+    z-index: 998;
+}
+
+.menu_mobile a {
+    color: var(--claro);
+    font-size: 1.2rem;
+    text-decoration: none;
+}
+/* ======== RESPONSIVIDADE ======== */
+
+
+@media (min-width: 768px) {
+    /*Esconder o nome Portifolio*/
+    .paragrafo_mobile {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+ 
+    .paragrafo_mobile {
+        color: var(--claro);
+        font-size: 2rem;
+        color: var(--claro);
+        font-weight: 500;
+        position: relative;
+        padding: 0.5rem;
+    }
+
+    .paragrafo_mobile::after {
+        content: '';
+        height: 2px;
+        width: 0;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background: linear-gradient(90deg, var(--primaria), var(--secundaria));
+        transition: width 0.5s ease;
+
+    }
+
+    .paragrafo_mobile:hover::after {
+        width: 100%;
+    }
+
+    /* esconder menu desktop */
+    .menu {
+        display: none;
+    }
+
+    .botao_desktop {
+        display: none;
+    }
+
+    /* mostrar hambúrguer */
+    .menu_celular {
+        display: block;
+    }
+
+    /* header mais espaçado no mobile */
+    .topo_modo_escuro,
+    .topo_modo_claro {
+        width: 100%;
+        justify-content: space-between;
+        padding: 0 20px;
+        gap: 0;
+    }
+}
