@@ -1,3 +1,5 @@
+/* ======== SEU ESTILO ORIGINAL (mantido) ======== */
+
 .topo_modo_escuro,
 .topo_modo_claro {
     width: 100%;
@@ -57,6 +59,7 @@
     height: 25px;
 }
 
+.botao,
 .botao_desktop {
     border-radius: 50%;
     padding: 10px 10px;
@@ -66,8 +69,10 @@
 }
 
 
-/*====== Botão menu (resoluções menores)*/
-.menu {
+
+/* ======== NOVO: BOTÃO HAMBÚRGUER (celular) ======== */
+
+.menu_hamburguer {
     display: none;
     font-size: 34px;
     background: none;
@@ -77,12 +82,16 @@
     margin-left: auto;
     margin-right: 20px;
 }
+
+
+/* ======== NOVO: MENU MOBILE ======== */
+
 .menu_mobile {
     position: absolute;
     top: 65px;
-    right: 10px;
+    right: 3px;
     background: var(--maisEscuro);
-    padding: 20px;
+    padding: 24px;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
@@ -97,6 +106,9 @@
     font-size: 1.2rem;
     text-decoration: none;
 }
+
+
+
 /* ======== RESPONSIVIDADE ======== */
 
 
@@ -115,7 +127,7 @@
         color: var(--claro);
         font-weight: 500;
         position: relative;
-        padding: 0.5rem;
+        padding: 0.9rem;
     }
 
     .paragrafo_mobile::after {
@@ -144,7 +156,7 @@
     }
 
     /* mostrar hambúrguer */
-    .menu_celular {
+    .menu_hamburguer {
         display: block;
     }
 

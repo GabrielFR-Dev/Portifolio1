@@ -1,4 +1,6 @@
 import "./globals.css";
+import ClientLayout from "@/componentes/clientLayout/clientLayout";
+
 
 export const metadata = {
   title: "portifolio",
@@ -9,6 +11,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="pt-br">
       <body>
+        <ClientLayout/>
         {children}
       </body>
     </html>
